@@ -13,7 +13,10 @@ extension UIViewController {
         let navigationController = UINavigationController(rootViewController: self)
         navigationController.navigationBar.prefersLargeTitles = true
         navigationController.viewControllers = [self]
-        navigationController.navigationBar.tintColor = .black
+        navigationController.navigationBar.tintColor = .systemGreen
+        navigationController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.systemGreen]
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.systemGreen]
+    
         return navigationController
     }
 }

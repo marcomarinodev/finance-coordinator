@@ -32,7 +32,7 @@ class CustomButton: UIButton {
     func setup() {
         self.clipsToBounds = true
         self.layer.cornerRadius = 10.0
-        self.backgroundColor = .black
+        self.backgroundColor = .systemGreen
     }
 
 }

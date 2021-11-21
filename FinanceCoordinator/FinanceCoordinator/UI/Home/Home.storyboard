@@ -11,13 +11,13 @@
         <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="FinanceCoordinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nOY-RX-1hM">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" id="9kU-zK-p5F">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -32,7 +32,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nOY-RX-1hM" secondAttribute="trailing" id="Vjt-HX-eXF"/>
                             <constraint firstItem="nOY-RX-1hM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="aXz-ZG-hBT"/>
                             <constraint firstItem="nOY-RX-1hM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="kUo-Py-c4B"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nOY-RX-1hM" secondAttribute="bottom" id="ngo-QX-vWK"/>
+                            <constraint firstAttribute="bottom" secondItem="nOY-RX-1hM" secondAttribute="bottom" id="ngo-QX-vWK"/>
                         </constraints>
                     </view>
                     <connections>
