@@ -1,0 +1,26 @@
+PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - Reusable (4.1.2):
+    - Reusable/Storyboard (= 4.1.2)
+    - Reusable/View (= 4.1.2)
+  - Reusable/Storyboard (4.1.2)
+  - Reusable/View (4.1.2)
+
+DEPENDENCIES:
+  - Charts
+  - Reusable (~> 4.1)
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - Reusable
+
+SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  Reusable: 6bae6a5e8aa793c9c441db0213c863a64bce9136
+
+PODFILE CHECKSUM: a02c4ed917eb737e0552fbc10959a465bd2fb2af
+
+COCOAPODS: 1.11.2
