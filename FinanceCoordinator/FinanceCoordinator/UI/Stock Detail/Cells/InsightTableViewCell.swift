@@ -25,6 +25,8 @@ class InsightTableViewCell: UITableViewCell, NibReusable {
 
     func config(titleText: String, dateText: String, author: String) {
         titleLabel.text = titleText
+        dateLabel.text = dateText
+        authorLabel.text = author
     }
     
 }

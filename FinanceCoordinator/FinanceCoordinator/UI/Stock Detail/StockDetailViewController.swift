@@ -17,7 +17,6 @@ protocol StockDetailViewControllerDelegate: AnyObject {
 class StockDetailViewController: UIViewController {
 
     @IBOutlet weak var lineChartView: LineChartView!
-    @IBOutlet weak var symbolNameLabel: UILabel!
     @IBOutlet weak var positivityLabel: UILabel!
     @IBOutlet weak var insightsTableView: UITableView!
     @IBOutlet weak var rangeSegmentedControl: UISegmentedControl!
@@ -91,24 +90,12 @@ class StockDetailViewController: UIViewController {
             var value = coordinatorDelegate.stockDetailViewControllerSummarize(self, high).1
             value = round(value * 100) / 100.0
             isPositive = coordinatorDelegate.stockDetailViewControllerSummarize(self, high).0
-            positivityLabel.text = isPositive ? setPositiveValue(text: "\(value) - Last:\(last)") : "\(value) - Last:\(last)"
+            positivityLabel.text = isPositive ? "+\(value) - Last:\(last)" : "\(value) - Last: \(last)"
             positivityLabel.textColor = isPositive ? .systemGreen : .systemRed
             
         }
         
-        symbolNameLabel.text = "\(meta.symbol) in \(meta.currency)"
-        
         plot(timestamp: timestamp, high: high, meta: meta, chartColor: (last > first) ? .systemGreen : .systemRed)
-    }
-    
-    private func setPositiveValue(text: String) -> String {
-        var finalPositive = text
-        
-        finalPositive = String(text.reversed())
-        finalPositive.append("+")
-        finalPositive = String(text.reversed())
-        
-        return finalPositive
     }
     
     @IBAction func stockSegmentedControlValueChanged(_ sender: Any) {

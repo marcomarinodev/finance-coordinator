@@ -11,7 +11,7 @@
         <!--Stock Detail View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="StockDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="StockDetailViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StockDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="StockDetailViewController" customModule="FinanceCoordinator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,20 +19,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynr-fq-gce" userLabel="Container View">
                                 <rect key="frame" x="0.0" y="90" width="414" height="772"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ls-mH-xO5" userLabel="Symbol Name">
-                                        <rect key="frame" x="20" y="8" width="374" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgh-1H-tx2">
-                                        <rect key="frame" x="20" y="16" width="374" height="24"/>
+                                        <rect key="frame" x="20" y="64" width="374" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mwj-tK-SL8">
-                                        <rect key="frame" x="20" y="43" width="374" height="32"/>
+                                        <rect key="frame" x="20" y="91" width="374" height="32"/>
                                         <segments>
                                             <segment title="Week"/>
                                             <segment title="Month"/>
@@ -44,14 +38,14 @@
                                         </connections>
                                     </segmentedControl>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="no2-G7-I0p" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="86" width="414" height="250"/>
+                                        <rect key="frame" x="0.0" y="134" width="414" height="250"/>
                                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="cHp-3k-0Id"/>
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vYv-VW-lPD">
-                                        <rect key="frame" x="16" y="346" width="382" height="426"/>
+                                        <rect key="frame" x="16" y="394" width="382" height="378"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="sectionIndexBackgroundColor" systemColor="linkColor"/>
                                         <connections>
@@ -66,20 +60,16 @@
                                     <constraint firstItem="mwj-tK-SL8" firstAttribute="leading" secondItem="ynr-fq-gce" secondAttribute="leading" constant="20" id="5ZQ-bO-itJ"/>
                                     <constraint firstItem="vYv-VW-lPD" firstAttribute="leading" secondItem="ynr-fq-gce" secondAttribute="leading" constant="16" id="7qf-Ho-EY2"/>
                                     <constraint firstItem="no2-G7-I0p" firstAttribute="top" secondItem="mwj-tK-SL8" secondAttribute="bottom" constant="12" id="7ue-3d-dNX"/>
-                                    <constraint firstAttribute="trailing" secondItem="1Ls-mH-xO5" secondAttribute="trailing" constant="20" id="8qS-9T-ZBP"/>
-                                    <constraint firstItem="Cgh-1H-tx2" firstAttribute="top" secondItem="1Ls-mH-xO5" secondAttribute="bottom" constant="8" id="EQ2-Ff-FCi"/>
                                     <constraint firstItem="no2-G7-I0p" firstAttribute="centerX" secondItem="ynr-fq-gce" secondAttribute="centerX" id="FTz-vO-2FK"/>
                                     <constraint firstAttribute="trailing" secondItem="no2-G7-I0p" secondAttribute="trailing" id="Faa-M5-NX9"/>
                                     <constraint firstItem="mwj-tK-SL8" firstAttribute="centerX" secondItem="ynr-fq-gce" secondAttribute="centerX" id="Kke-jh-4sG"/>
+                                    <constraint firstItem="Cgh-1H-tx2" firstAttribute="top" secondItem="ynr-fq-gce" secondAttribute="top" constant="64" id="NVj-gq-QxH"/>
                                     <constraint firstItem="Cgh-1H-tx2" firstAttribute="leading" secondItem="ynr-fq-gce" secondAttribute="leading" constant="20" id="Pdk-pr-AJT"/>
                                     <constraint firstAttribute="bottom" secondItem="vYv-VW-lPD" secondAttribute="bottom" id="T5a-Q6-ZvC"/>
-                                    <constraint firstItem="1Ls-mH-xO5" firstAttribute="leading" secondItem="ynr-fq-gce" secondAttribute="leading" constant="20" id="WEd-Oi-rfl"/>
-                                    <constraint firstItem="1Ls-mH-xO5" firstAttribute="top" secondItem="ynr-fq-gce" secondAttribute="top" constant="8" id="iAn-uR-zwu"/>
                                     <constraint firstItem="vYv-VW-lPD" firstAttribute="top" secondItem="no2-G7-I0p" secondAttribute="bottom" constant="10" id="jFh-C5-7wr"/>
-                                    <constraint firstItem="mwj-tK-SL8" firstAttribute="top" secondItem="1Ls-mH-xO5" secondAttribute="bottom" constant="35" id="otF-d3-p2i"/>
                                     <constraint firstAttribute="trailing" secondItem="vYv-VW-lPD" secondAttribute="trailing" constant="16" id="u4d-o4-jrH"/>
-                                    <constraint firstItem="1Ls-mH-xO5" firstAttribute="centerX" secondItem="ynr-fq-gce" secondAttribute="centerX" id="wWU-dl-SO7"/>
                                     <constraint firstAttribute="trailing" secondItem="Cgh-1H-tx2" secondAttribute="trailing" constant="20" id="yKA-B6-Ubo"/>
+                                    <constraint firstItem="mwj-tK-SL8" firstAttribute="top" secondItem="Cgh-1H-tx2" secondAttribute="bottom" constant="3" id="zlF-vF-bHj"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -97,7 +87,6 @@
                         <outlet property="lineChartView" destination="no2-G7-I0p" id="OgV-eg-A0D"/>
                         <outlet property="positivityLabel" destination="Cgh-1H-tx2" id="2Jt-Mo-DTQ"/>
                         <outlet property="rangeSegmentedControl" destination="mwj-tK-SL8" id="vQK-UV-dTE"/>
-                        <outlet property="symbolNameLabel" destination="1Ls-mH-xO5" id="bXP-jL-G7f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
